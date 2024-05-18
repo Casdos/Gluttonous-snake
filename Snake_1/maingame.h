@@ -2,6 +2,7 @@
 #define MAINGAME_H
 
 #include <QWidget>
+#include <Qpainter>
 
 namespace Ui {
 class MainGame;
@@ -14,6 +15,7 @@ class MainGame : public QWidget
 public:
     explicit MainGame(QWidget *parent = nullptr);
     ~MainGame();
+    void paintEvent(QPaintEvent *event);
 
 private:
     Ui::MainGame *ui;

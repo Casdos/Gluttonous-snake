@@ -13,6 +13,12 @@ ModeChoose::~ModeChoose()
     delete ui;
 }
 
+void ModeChoose::paintEvent(QPaintEvent *event)
+{
+    QPainter painter(this);
+    painter.drawPixmap(0,0,width(),height(),QPixmap(":/new/prefix1/2.jpg"));
+}
+
 void ModeChoose::on_EasyButton_clicked()
 {
     this->close();

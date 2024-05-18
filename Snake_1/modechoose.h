@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <maingame.h>
+#include <Qpainter>
 
 namespace Ui {
 class ModeChoose;
@@ -15,6 +16,7 @@ class ModeChoose : public QWidget
 public:
     explicit ModeChoose(QWidget *parent = nullptr);
     ~ModeChoose();
+    void paintEvent(QPaintEvent *event);
 
 private slots:
     void on_EasyButton_clicked();
