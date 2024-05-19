@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>ModeChoose</string>
   </property>
   <widget class="QPushButton" name="EasyButton">
    <property name="geometry">
