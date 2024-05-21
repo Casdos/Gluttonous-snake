@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainGame</string>
+   <string>Form</string>
   </property>
  </widget>
  <resources/>

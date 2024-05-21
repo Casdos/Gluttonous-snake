@@ -1,6 +1,6 @@
 #include "modechoose.h"
 #include "ui_modechoose.h"
-
+#include <QTime>
 ModeChoose::ModeChoose(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ModeChoose)
@@ -19,23 +19,38 @@ void ModeChoose::paintEvent(QPaintEvent *event)
     painter.drawPixmap(0,0,width(),height(),QPixmap(":/new/prefix1/2.jpg"));
 }
 
-void ModeChoose::on_EasyButton_clicked()
+void ModeChoose::on_EasyButton_clicked()  //简单模式
 {
-    this->close();
-    MainGame *ui_mg = new MainGame;
-    ui_mg -> show();
+    MainGame *Easy = new MainGame;
+    Easy -> showFullScreen();
+    Easy -> show();
+    QTime dieTime = QTime::currentTime().addMSecs(300);//延时300毫秒
+    while (QTime::currentTime()< dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    this->hide();
+
+
 }
 
-void ModeChoose::on_MidButton_clicked()
+void ModeChoose::on_MidButton_clicked()  //一般模式
 {
-    this->close();
-    MainGame *ui_mg = new MainGame;
-    ui_mg -> show();
+    MainGame *Mid = new MainGame;
+    Mid -> showFullScreen();
+    Mid -> show();
+    QTime dieTime = QTime::currentTime().addMSecs(300);//延时300毫秒
+    while (QTime::currentTime()< dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    this->hide();
+
 }
 
-void ModeChoose::on_pushButton_3_clicked()
+void ModeChoose::on_pushButton_3_clicked()  //困难模式
 {
-    this->close();
-    MainGame *ui_mg = new MainGame;
-    ui_mg -> show();
+    MainGame *Hard = new MainGame;
+    Hard -> showFullScreen();
+    Hard -> show();
+    QTime dieTime = QTime::currentTime().addMSecs(300);//延时300毫秒
+    while (QTime::currentTime()< dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents,100);
+    this->hide();
 }

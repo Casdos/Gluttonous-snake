@@ -19,6 +19,10 @@ public:
 
 private:
     Ui::MainGame *ui;
+
+    // QWidget interface
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MAINGAME_H

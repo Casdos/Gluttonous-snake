@@ -12,7 +12,7 @@ SOURCES += \
     main.cpp \
     maingame.cpp \
     modechoose.cpp \
-    widget.cpp
+    widget_1.cpp
 
 HEADERS += \
     maingame.h \
