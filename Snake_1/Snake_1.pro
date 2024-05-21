@@ -9,14 +9,18 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    food.cpp \
     main.cpp \
     maingame.cpp \
     modechoose.cpp \
+    snake.cpp \
     widget_1.cpp
 
 HEADERS += \
+    food.h \
     maingame.h \
     modechoose.h \
+    snake.h \
     widget.h
 
 FORMS += \
@@ -32,4 +36,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     pic1.qrc \
     pic2.qrc \
-    pic3.qrc
+    pic3.qrc \
+    snakephoto.qrc
+
+DISTFILES += \
+    1.jpg

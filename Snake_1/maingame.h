@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <Qpainter>
-
+#include"snake.h"
 namespace Ui {
 class MainGame;
 }
