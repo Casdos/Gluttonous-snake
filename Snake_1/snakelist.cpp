@@ -17,7 +17,12 @@ void snakelist::addsnake(int x,int y,QWidget* parent)
 }
 void snakelist::deletesnake(Snake* snake)
 {
-    if(snake->lastsnake==nullptr)
+    if(snake->lastsnake==nullptr&&snake->nextsnake==nullptr)
+    {
+        firstsnake=nullptr;
+        delete snake;
+    }
+    else if(snake->lastsnake==nullptr)
     {
         firstsnake=snake->nextsnake;
         delete snake;
@@ -45,3 +50,4 @@ bool snakelist::iscrashed(int x,int y)
     }
     return false;
 }
+

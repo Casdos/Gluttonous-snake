@@ -23,7 +23,6 @@ void ModeChoose::on_EasyButton_clicked()  //简单模式
 {
     MainGame *Easy = new MainGame;
     Easy -> show();
-        Easy -> showFullScreen();
     QTime dieTime = QTime::currentTime().addMSecs(300);//延时300毫秒
     while (QTime::currentTime()< dieTime)
         QCoreApplication::processEvents(QEventLoop::AllEvents,100);

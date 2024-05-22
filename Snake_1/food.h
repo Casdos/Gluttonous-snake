@@ -1,7 +1,7 @@
 #ifndef FOOD_H
 #define FOOD_H
 #include<QLabel>
-const int unit_step=10;
+const int unit_step=100;
 const int size=100;
 class food
 {

@@ -3,7 +3,7 @@
 #include"snake.h"
 class snakelist//蛇队列
 {
-private:
+public:
     Snake* firstsnake;
 public:
     snakelist();

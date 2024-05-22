@@ -6,6 +6,7 @@
 #include<QTimer>
 #include"foodlist.h"
 #include"snakelist.h"
+#include<qdebug.h>
 namespace Ui {
 class MainGame;
 }
@@ -14,7 +15,8 @@ class MainGame : public QWidget
 {
     Q_OBJECT
     Foodlist food_list;
-    snakelist snakelist;
+    snakelist usersnake_list;
+    QTimer* timer;
 public:
 
     explicit MainGame(QWidget *parent = nullptr);
@@ -27,7 +29,8 @@ private:
     // QWidget interface
 protected:
     void keyPressEvent(QKeyEvent *event);
-
+public slots:
+    void timeout();
 };
 
 #endif // MAINGAME_H
