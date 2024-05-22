@@ -1,7 +1,8 @@
 #ifndef FOOD_H
 #define FOOD_H
-
+#include<QLabel>
 const int unit_step=10;
+const int size=100;
 class food
 {
 public:
@@ -11,15 +12,8 @@ public:
     food* lastfood;
     food(int x,int y);
     bool iscrashed(int x,int y);
+    QLabel label_food;
+
 };
-class Foodlist
-{
-private:
-    food* firstfood;
-public:
-    Foodlist();
-    void addfood(int x,int y);
-    void deletefood(food* food);
-    bool iscrashed(int x,int y);
-};
+
 #endif // FOOD_H

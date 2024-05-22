@@ -1,5 +1,4 @@
 QT       += core gui
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -10,17 +9,21 @@ CONFIG += c++11
 
 SOURCES += \
     food.cpp \
+    foodlist.cpp \
     main.cpp \
     maingame.cpp \
     modechoose.cpp \
     snake.cpp \
+    snakelist.cpp \
     widget_1.cpp
 
 HEADERS += \
     food.h \
+    foodlist.h \
     maingame.h \
     modechoose.h \
     snake.h \
+    snakelist.h \
     widget.h
 
 FORMS += \

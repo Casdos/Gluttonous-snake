@@ -3,6 +3,7 @@
         <file>photo/headright.png</file>
         <file>photo/h_body.png</file>
         <file>photo/tailright.png</file>
+        <file>photo/apple.png</file>
     </qresource>
     <qresource prefix="/snake"/>
 </RCC>

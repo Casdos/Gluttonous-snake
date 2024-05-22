@@ -23,7 +23,14 @@ public:
     {
         if (MainGame->objectName().isEmpty())
             MainGame->setObjectName("MainGame");
+        MainGame->setWindowModality(Qt::WindowModal);
+        MainGame->setEnabled(true);
         MainGame->resize(1200, 900);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainGame->sizePolicy().hasHeightForWidth());
+        MainGame->setSizePolicy(sizePolicy);
         MainGame->setMinimumSize(QSize(1200, 900));
         MainGame->setMaximumSize(QSize(1200, 900));
 
