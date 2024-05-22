@@ -1,18 +1,16 @@
 #ifndef FOOD_H
 #define FOOD_H
 #include<QLabel>
-const int unit_step=100;
-const int size=100;
+#include<coordinate.h>
 class food
 {
 public:
-    int food_x;
-    int food_y;
-    food* nextfood;
-    food* lastfood;
-    food(int x,int y);
-    bool iscrashed(int x,int y);
+    Coordinate coord;
+    food(int x,int y,QWidget* parent);
     QLabel label_food;
+    bool iscrashed(food &target);
+    void show();//显示函数，未写
+
 
 };
 

@@ -8,6 +8,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    coordinate.cpp \
     food.cpp \
     foodlist.cpp \
     main.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     widget_1.cpp
 
 HEADERS += \
+    coordinate.h \
     food.h \
     foodlist.h \
     maingame.h \

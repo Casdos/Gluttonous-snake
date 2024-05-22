@@ -1,12 +1,12 @@
 #include "food.h"
-food::food(int x,int y):food_x(x),food_y(y),nextfood(nullptr),lastfood(nullptr)
+food::food(int x,int y,QWidget* parent):coord(x,y)
 {
     label_food.setPixmap(QPixmap(":/photo/apple.png"));
+    label_food.setParent(parent);
 }
-bool food::iscrashed(int x,int y)
+bool food::iscrashed(food &target)
 {
-    qDebug()<<x<<y<<food_x<<food_y;
-    if(food_x>x-unit_step&&food_x<x+unit_step&&food_y>y-unit_step&&food_y<y+unit_step)
+    if(target.coord.isequal(coord))
         return true;
     else
         return false;

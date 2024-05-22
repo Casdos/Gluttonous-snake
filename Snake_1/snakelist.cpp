@@ -1,51 +1,23 @@
 #include "snakelist.h"
 
-snakelist::snakelist():firstsnake(nullptr)
+snakelist::snakelist()
 {}
 void snakelist::addsnake(int x,int y,QWidget* parent)
 {
-    Snake* temp=new Snake(x,y,parent);
-    if(firstsnake==nullptr)
-        firstsnake=temp;
-    else
-    {
-        temp->nextsnake=firstsnake;
-        firstsnake->lastsnake=temp;
-        firstsnake=temp;
-    }
-    firstsnake->show();
+    snake_list.prepend( Snake(x,y,parent));
+    snake_list[0].show();
 }
-void snakelist::deletesnake(Snake* snake)
+void snakelist::deletesnake(int target)
 {
-    if(snake->lastsnake==nullptr&&snake->nextsnake==nullptr)
-    {
-        firstsnake=nullptr;
-        delete snake;
-    }
-    else if(snake->lastsnake==nullptr)
-    {
-        firstsnake=snake->nextsnake;
-        delete snake;
-    }
-    else if(snake->nextsnake==nullptr)
-    {
-        snake->lastsnake->nextsnake=nullptr;
-        delete snake;
-    }
-    else
-    {
-        snake->lastsnake->nextsnake= snake->nextsnake;
-        snake->nextsnake->lastsnake=snake->lastsnake;
-        delete snake;
-    }
-
+    //disshow()
+    snake_list.removeAt(target);
 
 }
-bool snakelist::iscrashed(int x,int y)
+bool snakelist::ismatched(int x,int y)
 {
-    for(Snake* snake=firstsnake;snake!=nullptr;snake=snake->nextsnake)
+    for(int i=0;i<snake_list.size();i++)
     {
-        if(snake->iscrashed(x,y))
+        if(snake_list[i].iscrashed(x,y))
             return true;
     }
     return false;

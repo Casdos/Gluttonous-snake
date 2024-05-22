@@ -4,12 +4,12 @@
 class snakelist//蛇队列
 {
 public:
-    Snake* firstsnake;
+    QList<Snake> snake_list;
 public:
     snakelist();
     void addsnake(int x,int y,QWidget* parent);
-    void deletesnake(Snake* snake);
-    bool iscrashed(int x,int y);
+    void deletesnake(int target);
+    bool ismatched(int x,int y);
 };
 
 #endif // SNAKELIST_H
